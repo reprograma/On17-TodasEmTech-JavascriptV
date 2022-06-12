@@ -1,4 +1,4 @@
-# On17-TodasEmTech-JavaScriptIV
+# On17-TodasEmTech-JavaScriptV
 
 Esta é a 12ª semana da turma online: Todas em Tech on17 - Front-end, nesta aula do dia 12/06/2022 teremos os seguintes conteúdos:
 
