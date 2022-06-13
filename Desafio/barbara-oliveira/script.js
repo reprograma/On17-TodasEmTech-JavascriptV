@@ -1,10 +1,13 @@
 const url = "https://digimon-api.vercel.app/api/digimon";
 const api = axios.create({ baseURL: url });
 
-const searchInput = document.getElementById("search");
+const searchName = document.getElementById("searchName");
+const searchLevel = document.getElementById("searchLevel");
 const digimonImageEl = document.getElementById("digimonImage");
 const digimonNameEl = document.getElementById("digimonName");
 const digimonLevelEl = document.getElementById("digimonLevel");
+const btnName = document.getElementById("btnName");
+const btnLevel = document.getElementById("btnLevel");
 
 async function fetchDigimonByName(name) {
   try {
@@ -16,13 +19,31 @@ async function fetchDigimonByName(name) {
   }
 }
 
-async function fetchSearchedDigimon() {
-  const digimonName = searchInput.value.trim();
+async function fetchDigimonByLevel(level) {
+  try {
+    const response = await api.get(`/level/${level}`);
+    return response.data;
+  } catch (err) {
+    alert("Ops! Não encontramos esse digimon!");
+    return [];
+  }
+}
 
-  const digimons = await fetchDigimonByName(digimonName);
+async function fetchSearchedDigimon(searchType) {
+  const digimonName = searchName.value.trim();
+  const digimonLevel = searchLevel.value.trim();
+
+  let digimons = [];
+
+  if (searchType === "name") {
+    digimons = await fetchDigimonByName(digimonName);
+  } else {
+    digimons = await fetchDigimonByLevel(digimonLevel);
+  }
 
   if (digimons.length > 0) {
-    const { name, img, level } = digimons[0];
+    const randomIndex = Math.floor(Math.random() * digimons.length);
+    const { name, img, level } = digimons[randomIndex];
 
     digimonImageEl.setAttribute("src", img);
     digimonImageEl.setAttribute("alt", `Imagem do digimon ${name}`);
@@ -34,11 +55,17 @@ async function fetchSearchedDigimon() {
   }
 }
 
-const btn = document.querySelector("button");
-btn.addEventListener("click", fetchSearchedDigimon);
+btnName.addEventListener("click", () => fetchSearchedDigimon("name"));
+btnLevel.addEventListener("click", () => fetchSearchedDigimon("level"));
 
-searchInput.addEventListener("keypress", function (event) {
+searchName.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
-    fetchSearchedDigimon();
+    fetchSearchedDigimon("name");
+  }
+});
+
+searchLevel.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    fetchSearchedDigimon("level");
   }
 });
