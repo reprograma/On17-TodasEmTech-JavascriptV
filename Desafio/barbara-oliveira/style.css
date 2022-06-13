@@ -1,0 +1,6 @@
+#digimonImage {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  visibility: hidden;
+}
