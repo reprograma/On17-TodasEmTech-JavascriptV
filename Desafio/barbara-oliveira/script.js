@@ -51,7 +51,9 @@ async function fetchSearchedDigimon(searchType) {
     digimonImageEl.style.visibility = "visible";
 
     digimonNameEl.innerText = name;
+    digimonNameEl.style.textAlign = "center";
     digimonLevelEl.innerText = level;
+    digimonLevelEl.style.textAlign = "center";
   }
 }
 
