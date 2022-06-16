@@ -1,0 +1,14 @@
+{
+  "name": "npm_da_lili",
+  "version": "1.0.0",
+  "description": "demonstracao na aula da semana 12",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lilitravesti",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

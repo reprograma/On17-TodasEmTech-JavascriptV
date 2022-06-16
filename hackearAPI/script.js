@@ -65,7 +65,7 @@ let getBeginersByName = async (field, name) => {
         "Authorization": "Bearer 6RdCxxA2ma03gKlwFgk100e3oxLVLn50Xny04Hb5FjppwZQlNdKFJ9JsX3vMi8rRfPqJEe7lRUplFnl2bKn3"
       }
     } )
-    const beginerByName = await response.json()
+    const beginerByName = await response.json() 
     console.log(beginerByName)
   }
   catch(err) {
@@ -76,35 +76,39 @@ let getBeginersByName = async (field, name) => {
 // getBeginersByName("city", "recife")
 // getBeginersByName("name", "benja")
 
-let createBeginer = async () => {
+
+let beginerData = {
+  "name": "Benja",
+  "phone": "83945362728",
+  "email": "benjahtinha@bio.com",
+  "linkedin": "https://linkedin.com/in/aniragestora",
+  "github": "https://github.com/aniraaunica",
+  "city": "Rio de Janeiro",
+  "state": "RJ",
+  "studyTime": 5,
+  "stacksOfInterest": "Front-end",
+  "priorKnowledge": [
+    "CSS",
+    "Typescript",
+    "React"
+  ],
+  "englishLevel": 5,
+  "othersPrograms": "minas programam",
+  "hasComputer": true,
+  "internetAccess": false,
+  "message": "Girl from Rio",
+  "findUs": "Amiges"
+}
+
+let createBeginer = async (body = beginerData) => {
   try {
     const response = await fetch('https://teste-api-lilit.herokuapp.com/beginers/register', {
       method: "POST",
       headers: {
+        'Content-Type': 'application/json',
         "Authorization": "Bearer 6RdCxxA2ma03gKlwFgk100e3oxLVLn50Xny04Hb5FjppwZQlNdKFJ9JsX3vMi8rRfPqJEe7lRUplFnl2bKn3"
       },
-      body: {
-        "name": "Anira",
-        "phone": "21945362728",
-        "email": "anira@bank.com",
-        "linkedin": "https://linkedin.com/in/aniragestora",
-        "github": "https://github.com/aniraaunica",
-        "city": "Rio de Janeiro",
-        "state": "RJ",
-        "studyTime": 5,
-        "stacksOfInterest": "Front-end",
-        "priorKnowledge": [
-          "CSS",
-          "Typescript",
-          "React"
-        ],
-        "englishLevel": 5,
-        "othersPrograms": "minas programam",
-        "hasComputer": true,
-        "internetAccess": false,
-        "message": "Girl from Rio",
-        "findUs": "Amiges"
-      }
+      body: JSON.stringify(body)
     })
     const newBeginer = await response.json()
     console.log(newBeginer)
@@ -114,7 +118,45 @@ let createBeginer = async () => {
   }
 }
 
+let deleteBeginer = async (id) => {
+  try {
+    const response = await fetch(`https://teste-api-lilit.herokuapp.com/beginers/delete/${id}`, {
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json',
+        "Authorization": "Bearer 6RdCxxA2ma03gKlwFgk100e3oxLVLn50Xny04Hb5FjppwZQlNdKFJ9JsX3vMi8rRfPqJEe7lRUplFnl2bKn3"
+      }
+    })
+    const deleted = await response.json()
+    console.log(deleted)
+  }
+  catch(err) {
+    console.error(err)
+  }
+}
 
+let beginerDateToUpdate = {
+  "message": "girl from Rio",
+  "priorKnowledge": ["Java"]
+}
+
+let updateBeginer = async (id, body = beginerDateToUpdate) => {
+  try {
+    const response = await fetch(`https://teste-api-lilit.herokuapp.com/beginers/update/${id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json',
+        "Authorization": "Bearer 6RdCxxA2ma03gKlwFgk100e3oxLVLn50Xny04Hb5FjppwZQlNdKFJ9JsX3vMi8rRfPqJEe7lRUplFnl2bKn3"
+      },
+      body: JSON.stringify(body)
+    })
+    const deleted = await response.json()
+    console.log(deleted)
+  }
+  catch(err) {
+    console.error(err)
+  }
+}
 
 
 
