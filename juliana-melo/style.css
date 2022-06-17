@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+#botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    padding: 15px;
+    background-color: aqua;
+
+}
