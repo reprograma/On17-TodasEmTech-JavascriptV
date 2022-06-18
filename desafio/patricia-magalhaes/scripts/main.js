@@ -34,3 +34,12 @@ button.addEventListener("click", function () {
   getDigimonByName(digimonInputValue);
   resetInputValue();
 });
+
+document.addEventListener("keypress", function () {
+  if (event.keyCode == 13) {
+    const digimonInputValue = input.value;
+    getDigimonByName(digimonInputValue);
+    resetInputValue();
+  }
+});
+
