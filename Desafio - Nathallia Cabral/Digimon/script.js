@@ -1,8 +1,32 @@
-/* CRIAR UMA FUNÇÃO PARA PESQUISAR OS DIGIMONS */
+const input = document.getElementById('digimon_input');
+const botao = document.getElementById('search');
+
+botao.addEventListener('click', () => {
+    desafioDigimon(input.value);
+})
 
 
+let desafioDigimon = async (name) => {
+    try {
+        const response = await fetch(`https://digimon-api.vercel.app/api/digimon/name/${name}`, {
+            method: 'GET',
+        });
 
-/*BUSCANDO E PREENCHENDO O CARD */
+        const obj = await response.json()
+        const imagem = document.getElementById('digimon_image');
+        imagem.src = obj[0].img;
+        const digimonNome = document.getElementById('digimon_nome');
+        digimonNome.innerText = obj[0].name;
+        const level = document.getElementById('digimon_level');
+        level.innerText = ` Level:  ${ obj[0].level}`
+
+    } catch (err) {
+        alert("Ops! Não encontramos esse Digimon!");
+        return [];
+    }
+}
+
+
 async function getDigimon() {
     try {
 
@@ -27,40 +51,3 @@ async function getDigimon() {
 }
 
 getDigimon()
-
-
-
-async function searchDigimon() {
-    try {
-
-
-        const inputDigimon = document.getElementById('digimon_input').value
-        const response = await fetch(`/api/digimon/name/${inputDigimon}`);
-        const data = await response.json();
-        console.log(data);
-
-
-        data.map((getdigimon) => {
-
-            const imgDigimon = document.getElementById("digimon_imagem");
-            imgDigimon.value = data.img
-
-            const nomeDigimon = document.getElementById("digimon_nome");
-            nomeDigimon.value = data.name
-
-            const levelDigimon = document.getElementById("digimon_level");
-            levelDigimon.value = data.level
-
-        });
-
-    } catch (erro) {
-        alert("Ops! Não encontramos esse Digimon!");
-        return [];
-    }
-}
-
-const botaoBuscar = document.getElementById('search')
-botaoBuscar.addEventListener("click", function () {
-
-    searchDigimon()
-});
