@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <main>
+<!-- Sessão pesquisa de Digimons -->
+        <section class="container">
+            <h1>Digimon</h1>
+            <input type="text" id="digimon_pesquisa" placeholder="Digite o seu Digimon aqui">
+            <button type="button" onclick="getCards()">Pesquisar</button>
+
+<!-- DIV criando a lista de nomes de Digimons -->
+            <div id="listagem_digimon"> </div>
+
+<!-- Sessão card Digimon -->
+        <section class="digimon_card">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="" id="digimon_image" alt="">
+                    </div>
+                    <p class="name" id="digimon_name"></p>
+                    <p class="level" id="digimon_level"></p>
+                </div>
+        </section> 
+
+<!-- Sessão final - imagem com logo  -->
+        <footer class="img_logo">
+            <img src="./img/digimon-png-photos.png.crdownload">
+        </footer>
+
+
+        </section>
+     </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
