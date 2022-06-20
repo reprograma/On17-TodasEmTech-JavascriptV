@@ -1,5 +1,8 @@
-const sectionContainer = document.querySelector(".section_container");
-const selectContainer = document.querySelector(".select_container");
+const digimonCard = document.querySelector(".digimon_card");
+const digimonselect = document.querySelector("#digimon_list");
+const digimonImage = document.querySelector(".digimon_image");
+const digimonName = document.querySelector(".digimon_name");
+const digimonLevel = document.querySelector(".digimon_level");
 
 async function getDigimons() {
   try {
@@ -8,8 +11,10 @@ async function getDigimons() {
     );
     const digimonData = await response.data;
 
-    return renderDigimonInList(digimonData);
-  } catch {}
+    renderDigimonInList(digimonData);
+  } catch (err) {
+    alert("Erro ao carregar lista, tente novamente !");
+  }
 }
 
 async function renderDigimonInList(digimons) {
@@ -19,35 +24,37 @@ async function renderDigimonInList(digimons) {
     elementList.innerHTML = digimon.name;
     digimonList.appendChild(elementList);
   });
-  return renderDigimon(digimonList);
+}
+
+digimonselect.addEventListener("change", () => {
+  let value = digimonselect.options[digimonselect.selectedIndex].text;
+
+  getDigimonByName(value);
+});
+
+async function getDigimonByName(digimonName) {
+  try {
+    const response = await axios.get(
+      `https://digimon-api.vercel.app/api/digimon/name/${digimonName}`
+    );
+    const digimon = await response.data;
+
+    renderDigimon(digimon);
+  } catch (err) {
+    alert("Erro ao localizar o digimon, tente novamente !");
+  }
 }
 
 async function renderDigimon(digimon) {
-  const digimonContainer = document.querySelector(".digimon_container");
+  document.querySelector(".digimon_card").style.setProperty("display", "flex");
+  digimonImage.setAttribute("src", digimon[0].img);
 
-  digimon.addEventListener("change", () => {
-    let value = digimon.options[digimon.selectedIndex].value.toLowerCase();
+  digimonName.innerHTML = `<b>${digimon[0].name}</b>`;
+  digimonLevel.innerHTML = `<b>Level:</b> ${digimon[0].level}`;
 
-    const digimonCard = document.createElement("div");
-    digimonCard.className = "digimon_card";
-    digimonCard.style.width = "65%";
-    digimonCard.style.height = "50%";
-    digimonCard.style.backgroundColor = "transparent";
-    digimonCard.style.border = "solid rgb(47	70	156		)";
-    digimonContainer.appendChild(digimonCard);
-
-    let digimonImage = document.createElement("img");
-    digimonImage.className = "digimon_image";
-    digimonImage.setAttribute(
-      "src",
-      `https://digimon.shadowsmith.com/img/${value}.jpg`
-    );
-    digimonCard.appendChild(digimonImage);
-
-    digimon.addEventListener("change", () => {
-      digimonContainer.removeChild(digimonCard);
-    });
-  });
+  digimonCard.appendChild(digimonImage);
+  digimonCard.appendChild(digimonName);
+  digimonCard.appendChild(digimonLevel);
 }
 
 getDigimons();
