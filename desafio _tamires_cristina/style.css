@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section_container {
+  background-image: url(./assets/digimon_background.png);
+  background-size: cover;
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+ 
+}
+
+.list_container{
+  margin: 1% 0 0 1%;
+  width: 22vw;
+}
+.digimon_container{
+  display: flex;
+  align-items: center;
+  width: 35vw;
+}
+.digimon_card{
+  /* width: 65%;
+  height: 50%;
+  background-color: transparent; */
+  /* border: solid rgb(47	70	156		); */
+}
+
+.digimon_image{
+  width: 100%;
+  height: 60%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: solid 1px #fff;
+  border-radius: 0.25em;
+  background: transparent;
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select_container {
+  position: relative;
+  display: flex;
+  width: 15em;
+  height: 2.5em;
+  line-height: 3;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 0.25em;
+  margin-top: 1%;
+}
+.select_container::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #ffffff;
+
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+.select_container:hover::after {
+  color: rgb(141 156 233);
+}
