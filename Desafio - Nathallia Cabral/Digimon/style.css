@@ -28,6 +28,10 @@ button{
   margin-left: -34px;
 }
 
+p{
+  margin-top: 100px;
+}
+
 /* --------------------------------------------- */
 
 /* Lista de Digimons... */
@@ -75,22 +79,27 @@ button{
   flex-direction: column;
   align-items: center;
   position: absolute;
-  width: 221px;
-  height: 272px;
+  width: 244px;
+  height: 391px;
   background: #FFFFFF;
   box-shadow: 0px 7px 4px 3px rgb(0 0 0 / 25%);
   border-radius: 13px;
-  margin-left: 588px;
-  margin-top: 175px;
+  margin-left: 476px;
+  margin-top: 65px;
 }
+
 
 .nome{
   padding: 5px;
 }
 
+.digimon{
+  text-transform: uppercase;
+}
+
 /* Image Container */
 .card .img-container {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #ffffff;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -100,7 +109,7 @@ button{
 /* Image */
 .card .img-container img {
   margin-top: 20px;
-  max-width: 70%;
+  max-width:100%;
 }
 
 .card .info {
@@ -109,14 +118,16 @@ button{
 }
 
 /* Level Background */
-.card .number {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-size: 10px;
-  padding: 5px 10px;
-}
 
 .card .name {
   margin: 15px 0 7px;
   letter-spacing: 1px;
 }
+
+.card #digimon_level {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
