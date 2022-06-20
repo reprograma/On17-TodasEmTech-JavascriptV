@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #141414;
+    background-color: #141;
 }
 
 section{
@@ -13,6 +13,7 @@ section{
     align-items:center;
     justify-content: center;
     margin-top: 6rem;
+    
 }
 
 h1{
@@ -24,5 +25,14 @@ h1{
 
 button{
     padding: 1px 4px;
+}
+
+h2{
+    color: white;
+
+}
+
+p{
+    color: white;
 }
 
