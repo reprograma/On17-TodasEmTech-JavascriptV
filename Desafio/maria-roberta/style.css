@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-family: "JetBrains Mono";
+    font-style: oblique;
+    color: rgb(0, 6, 10);
+    
+}
+  
+body {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f2bab600-c1cf-4827-93ad-4a670df46535/ddga0uy-36823a1d-80b3-4377-bf4a-30e95d6415ff.png);
+}
+
+
+#div-id {
+    margin: 7px;
+    display: flex;
+    flex-direction: column;
+    height: 4230px;
+    background-color: #f8f6fca8;
+    width: 170px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: .8rem;
+  
+}
+
+#botao-id {
+    padding: .2rem;
+    font-size: 1.2rem;
+    border-radius: .8rem;
+    margin-top: .5rem;
+  }
+
+#input-id {
+    padding: .2rem;
+    border-radius: .8rem;
+    font-size: 1.2rem;
+  }
