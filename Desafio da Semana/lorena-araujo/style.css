@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Anek Latin', sans-serif;
+}
+
+body {
+  background-image: url("./Digimon.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#caixa-input {
+  display:flex;
+  justify-content:space-around;
+  margin-top: 130px;
+  margin-left: 450px;
+  align-items:center;
+  text-align: center;
+}
+
+input {
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  border-width: 2px;
+  border-color: purple;
+  color: purple;
+}
+
+#button {
+  font-size: 18px;
+  font-style: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border-width: 2px;
+  background-color: purple;
+  border-color: orchid;
+}
+
+#button:hover {
+  background-color: orchid;
+}
+
+h2 {
+  padding: 15px;
+  color: white;
+}
+
+img {
+  width: 150px;
+}
+
+h1 {
+  color: purple;
+  padding: 10px;
+}
+
+#listagem {
+  font-size: 18px;
+  height: 200px;
+  color:white;
+  overflow-y: scroll;
+}
+
+.footer-div {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 200px;
+}
