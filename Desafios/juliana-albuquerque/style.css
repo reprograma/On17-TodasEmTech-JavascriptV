@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding: 0;
+  }
+  body{
+    background-color: #f8d4cb;
+  }
+  .container {
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    margin-top:30px;
+  }
+   input {
+    border-radius: 16px;
+    padding: 10px 30px;
+    font-size: 20px;
+  }
+  .card h2, .card h3{
+    color: #f55651;
+  }
+  #submit {
+    border-radius: 16px;
+    font-size: 12px;
+    padding: 10px 30px;
+    background-color: #fd4102;
+  
+   }
+   #submit:hover{
+   cursor:pointer;
+   background-color: #f9b1b1;
+   }
+  h1{
+  color: #ff0404;
+  }
+  .lista{
+  overflow-y: scroll;
+  height: 80vh;
+  } 

@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, yellowgreen, palegreen, aquamarine);
+  color: seagreen;
+  padding: 3rem;
+}
+
+.card {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 5px dotted seagreen;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+input {
+  background: none;
+  border: 3px solid seagreen;
+  border-radius: 5px;
+  height: 1.8rem;
+  text-align: center;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+button {
+  background: seagreen;
+  border: 3px solid seagreen;
+  border-radius: 5px;
+  height: 1.8rem;
+  width: 3.6rem;
+  text-align: center;
+  color: snow;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.found-search {
+  width: 200px;
+  height: 200px;
+  border: 5px dotted seagreen;
+  padding: 1rem 0;
+}
+
+#digimonImage {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 426px) {
+  .card {
+    margin: 0 10%;
+  }
+
+  .found-search {
+    width: 250px;
+    height: 250px;
+  }
+
+  #digimonImage {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    margin: 0 15%;
+  }
+  .search-all {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .found-search {
+    width: 300px;
+    height: 300px;
+    border: 5px dotted seagreen;
+    padding: 1rem 0;
+  }
+
+  #digimonImage {
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    visibility: hidden;
+  }
+}
