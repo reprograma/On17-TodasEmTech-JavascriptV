@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: darkslategray;
+}
+
+body {
+  background-color: #EDBFC6;
+}
+
+header {
+    background-color: #AF8D86;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    position: relative;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    white-space: nowrap;
+    border-right: 1px solid #999;
+    -webkit-background-clip: text;
+    background-color: #260C1A;
+    filter: blur(30%);
+    animation: digitando 5s steps(20) infinite;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  @keyframes digitando {
+    0% {
+      width: 0%;
+    }
+    
+    70% {
+      width: 100%;
+    }
+    
+    90% {
+      width: 100%;
+    }
+    
+    100% {
+      width: 0%;
+    }
+  }
+
+.input {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  color: #432E36;
+}
+
+.digi-btn {
+  
+  padding: 10px;
+  background-color: #AF8D86;
+  color: #260C1A;
+  border-radius: 10px;
+
+}
+
+.digi-list {
+  justify-content: space-around;
+  border: 10px solid #260C1A;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 50px;
+}
+
+.digi-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.ul-name {
+  color: #432E36;
+}
+
+.selected {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #432E36;
+  padding: 50px;
+  margin: 50px;
+  border-radius: 50px;
+  background-color: white;
+} 
+
+.card h3 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #260C1A;
+}
+
+.card p {
+  color: #432E36;
+}
+
+.digi-img {
+  width: 100%;
+}
