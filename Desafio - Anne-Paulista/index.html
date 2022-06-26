@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ache seu Digimon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <h1>Digimon</h1>
+        <input type="text" id="digimon_busca" placeholder="Nome digimon" />
+        <button type="button" onclick="getCards()">Pesquisar</button>
+
+        <div id="listagem_digimon"></div>
+
+        <section class="digimon_card">
+          <div class="card">
+            <div class="img-card">
+              <img src="" id="digimon_image" alt="" />
+            </div>
+            <p class="name" id="digimon_name"></p>
+            <p class="level" id="digimon_level"></p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
