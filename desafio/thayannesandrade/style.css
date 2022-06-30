@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #c4dfff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+.search {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    margin-top: 2.125rem;
+}
+
+#searchInput {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: 0.14rem solid bisque;
+    text-align: center;
+}
+
+#button {
+    margin-top: 0.625rem;
+    width: 4rem;
+    border-radius: 0.5rem;
+    border: 0.14rem solid bisque;
+    background-color: white;
+}
+
+#demo {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin-left: 65px;
+    margin-top: 40px;
+}
+
+#cards {
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.25rem solid bisque;
+    border-radius: 10px ;
+    background-color: white;
+    padding: 15px ;
+}
+
+.image {
+    border-radius: 10px ;
+    height: 450px;
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.card__text {
+    padding: 5px;
+    font-size: 20px;
+}
