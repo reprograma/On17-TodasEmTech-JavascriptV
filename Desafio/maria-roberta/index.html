@@ -1,27 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Digimon</title>
+    <link rel="stylesheet" href="style.css">
+        
 </head>
 <body>
-    <div id="div-id">
-        <p>Nome dos Digimons:</p>
-        <ul>
-            <li></li>
-        </ul>
-    </div>
+    <main>
+        <section class="container">
+            <h1>Nome dos Digimons:</h1>
+            <div id="pesquisa">
+                <input type="text" id="pesquisar-digimon" placeholder="Digite o seu Digimon aqui" onfocus="this.value='';">
+                <button type="button" id= "botao-id" onclick="getCards()">Pesquisar</button> 
+            </div>
+            <div id="div-id">
+                <div id="lista-digimon"> </div>
+            </div>
+        </section>
+                
+        <section class="digimon_card">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="" id="imagem-digimon" alt="imagem do digimon pesquisado">
+                    </div>
+                </div>
+        </section>
 
-    <div id="pesquisa">
-        <input type="text" id="input-id">
-        <button type="submit" id="botao-id">Buscar Digimon</button>
-    </div>
+        <div class="efeito">
+            <p class="nome" id="digimon_nome"></p>
+            <p class="level" id="digimon_level"></p>
+        </div>
+        <div class="efeito-1">
+            <img class="logo-png" src="./ca5ba7d121989a03a9e22518a3ccaab1.png" alt="logo digimon">
+        </div>
 
-    <div id="div-exibir"></div>
-    
-    <script src="script.js"></script>
+     </main>
+
+    <script src="novoScript.js"></script>
 </body>
 </html>
