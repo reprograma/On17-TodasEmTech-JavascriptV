@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: #324E80;
+  }
+
+  h1 {
+    color: #C85D2F;
+    padding: 20px;
+    text-align: center;
+    
+  }
+
+  h2 {
+    padding: 15px;
+    color: #C85D2F;
+  }
+  
+  #caixa-input {
+   
+    margin: 50px;
+    align-items:center;
+    text-align: center;
+  }
+  
+  input {
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border-width: 2px;
+    border-color: #C85D2F;
+    color: rgb(195, 130, 11);
+  }
+  
+  #button {
+    font-size: 18px;
+    font-style: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-width: 2px;
+    background-color: #C85D2F;
+    border-color: #AD705D;
+  }
+
+  #caixa-infos{
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  img {
+    padding: 50px;
+
+  }
+  
+  #listagem {
+    font-size: 1px;
+    color:#324E80;
+    display: flex;
+
+  }
+  
