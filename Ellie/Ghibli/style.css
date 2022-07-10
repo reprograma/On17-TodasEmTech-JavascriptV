@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: black;
+
+}
+
+p {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/originals/d1/fb/03/d1fb032d8c674497bed108893a150adb.jpg");
+    background-size: cover;
+}
+
+#demo {
+    display: grid;
+    justify-items: center;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-bottom: 3em;
+}
+
+.card img {
+    width: 170%;
+    align-self: center;
+    box-shadow: 1px 1px 10px rgb(13, 13, 14);
+
+}
+
+.title {
+    font-size: 2rem;
+
+}
+
+.type {
+    align-self: flex-start;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.type::before{
+    content:emoji;
+    font-style: normal;
+    margin-right: 2px;
+
+}
+
+.description {
+    margin-top:  10px;
+
+}
