@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aqua;
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+
+  .photo{
+    padding: 100px;
+    display:flex;
+
+  }
+
+  .search{
+    color:bisque;
+    display: flex;
+
+  }
+
