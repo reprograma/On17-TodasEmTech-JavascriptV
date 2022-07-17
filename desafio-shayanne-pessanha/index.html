@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS V</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div>
+        <label for="search-input">Digite o nome de um Digimon</label>
+        <input value="koromon" type="text" name="search-input" id="search-input">
+        <button onclick="handleBusca()">Buscar</button>
+    </div>
+    <div class="results">
+        <div class="digi-card">
+            <h4 class="digi-name"></h4>
+            <p class="digi-level"></p>
+            <img class="digi-img">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
