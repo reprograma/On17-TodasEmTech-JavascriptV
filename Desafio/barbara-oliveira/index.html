@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digimon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Digimons:</h1>
+      <div class="search-all">
+        <div>
+          <input id="searchName" placeholder="Pesquise pelo nome" />
+          <button id="btnName">Buscar</button>
+        </div>
+        <p>ou por</p>
+        <div>
+          <input id="searchLevel" placeholder="Pesquise pelo level" />
+          <button id="btnLevel">Buscar</button>
+        </div>
+      </div>
+      <div class="result">
+        <div class="found-search">
+          <img id="digimonImage" src="" alt="" />
+          <p id="digimonName"></p>
+          <p id="digimonLevel"></p>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.js"
+      integrity="sha512-uplugzeh2/XrRr7RgSloGLHjFV0b4FqUtbT5t9Sa/XcilDr1M3+88u/c+mw6+HepH7M2C5EVmahySsyilVHI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

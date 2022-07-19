@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    color: rgb(63, 99, 133);
+    background-color: rgb(217, 233, 248);
+  }
+
+
+
+h1 {
+    color: rgb(63, 99, 133);
+    text-align:justify;
+    margin-top: 60px;
+    margin-left: 30px;
+
+
+}
+
+input {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+/* .listagem_digimon {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+} */
+
+.digimon_card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.digimon_card {
+    /* text-align: center; */
+    /* display: flex; */
+    justify-content:center;
+    /* flex-direction: column; */
+    align-items: center;
+    margin-top: 8%;
+            
+}
+
+#digimon_image {
+    border-radius: 5%;
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+    
+
+ }
+
+#digimon_name {
+    margin-top: 30px;
+    font-size: 15px;
+    margin-left: 50px;
+    
+}
+
+#digimon_level {
+    margin-top: 30px;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+#listagem_digimon {
+    margin-top: 30px;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+.img_logo {
+    text-align: center;
+    margin-top: 20%;
+    display:block
+
+}
+
