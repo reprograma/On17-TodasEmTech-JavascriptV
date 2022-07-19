@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon API</title>
+    <link rel="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <main>
+        <section class="container">
+            <h1>Nome dos Digimons:</h1>
+            <div id="pesquisa">
+                <input type="text" id="pesquisar-digimon" placeholder="Digite o seu Digimon aqui" onfocus="this.value='';">
+                <button type="button" id= "botao-id" onclick="getCards()">Pesquisar</button> 
+            </div>
+
+            <div id="div-id">
+                <div id="lista-digimon"> </div>
+            </div>
+        </section>
+                
+        <section class="digimon_card">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="" id="imagem-digimon" alt="imagem do digimon pesquisado">
+                    </div>
+                    <p class="nome" id="digimon_nome"></p>
+                    <p class="level" id="digimon_level"></p>
+                </div>
+        </section>
+
+     </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
